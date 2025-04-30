@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speed Star Motors - Feedback</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="wrapper">
+        <!-- Consistent Header -->
+        <header class="page-header">
+            <h1>Speed Star Motors</h1>
+            <p>Your Ultimate Car Dealership in Botswana</p>
+
+        <!-- Consistent Navigation -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact-us.html">Contact Us</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+            </ul>
+        </nav>
+        </header>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Left Sidebar -->
+            <aside class="left-sidebar">
+                <h3>Customer Testimonials</h3>
+                <img src=images/sports-car.png>
+                <div class="testimonial-quote">
+                    <p>"Albertina and her team provided exceptional service when I purchased my new SUV!"</p>
+                    <p>- Mpho T., Gaborone</p>
+                </div>
+                <p>Your feedback helps us maintain our high standards of service.</p>
+            </aside>
+
+            <!-- Article -->
+            <article class="contact-form">
+                <h2>Share Your Experience</h2>
+                <p>We value your feedback to help us improve our services. Please complete the form below.</p>
+                
+                <form id="feedbackForm">
+                    <div class="form-group">
+                        <label for="name">Full Name:</label>
+                        <input type="text" id="name" name="name" required>
+                        <div id="nameError" class="error"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address:</label>
+                        <input type="email" id="email" name="email" required>
+                        <div id="emailError" class="error"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="rating">Service Rating:</label>
+                        <select id="rating" name="rating">
+                            <option value="">Select rating</option>
+                            <option value="5">Excellent</option>
+                            <option value="4">Very Good</option>
+                            <option value="3">Good</option>
+                            <option value="2">Fair</option>
+                            <option value="1">Poor</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="feedback">Your Feedback:</label>
+                        <textarea id="feedback" name="feedback" rows="5" required></textarea>
+                        <div id="feedbackError" class="error"></div>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">
+                        <img src="https://cdn-icons-png.flaticon.com/512/2343/2343694.png" width="20" alt="Send icon">
+                        Submit Feedback
+                    </button>
+                </form>
+                <div id="successMessage">
+                    Thank you for your feedback, <span id="userName"></span>! We appreciate your time.
+                </div>
+            </article>
+
+            <!-- Right Sidebar -->
+            <aside class="right-sidebar">
+                <h3>Why Your Feedback Matters</h3>
+                <img src=images/suv.png>
+                <ul class="benefits-list">
+                    <li><img src="https://cdn-icons-png.flaticon.com/512/1828/1828640.png" width="15"> Helps us improve our services</li>
+                    <li><img src="https://cdn-icons-png.flaticon.com/512/1828/1828640.png" width="15"> Guides our training programs</li>
+                    <li><img src="https://cdn-icons-png.flaticon.com/512/1828/1828640.png" width="15"> Shapes our future offerings</li>
+                </ul>
+                
+                <div class="contact-cta">
+                    <p>Need immediate assistance?</p>
+                    <a href="contact-us.html" class="button">Contact Albertina</a>
+                </div>
+            </aside>
+        </div>
+
+        <!-- Consistent Footer -->
+        <footer>
+            <p>&copy; 2025 Speed Star Motors. All rights reserved.</p>
+            <p>Founded by Albertina Matlhodi | <a href="contact-us.html">123 Auto Mall Drive, Gaborone</a></p>
+        </footer>
+    </div>
+
+    <!-- External JavaScript file -->
+    <script src="feedback-validation.js"></script>
+</body>
+</html>

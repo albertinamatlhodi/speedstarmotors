@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speed Star Motors - Our Products</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Table-specific styles */
+        .vehicle-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 0.9em;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .vehicle-table thead tr {
+            background-color: #333;
+            color: #ffffff;
+            text-align: left;
+        }
+
+        .vehicle-table th,
+        .vehicle-table td {
+            padding: 12px 15px;
+            border: 1px solid #dddddd;
+        }
+
+        .vehicle-table tbody tr {
+            border-bottom: 1px solid #dddddd;
+        }
+
+        .vehicle-table tbody tr:nth-of-type(even) {
+            background-color: #f3f3f3;
+        }
+
+        .vehicle-table tbody tr:last-of-type {
+            border-bottom: 2px solid #333;
+        }
+
+        .in-stock-text {
+            color: #155724;
+            font-weight: bold;
+            background-color: #d4edda;
+            padding: 3px 8px;
+            border-radius: 4px;
+        }
+
+        .out-of-stock-text {
+            color: #721c24;
+            font-weight: bold;
+            background-color: #f8d7da;
+            padding: 3px 8px;
+            border-radius: 4px;
+        }
+
+        .vehicle-image {
+            width: 100px;
+            height: auto;
+            border-radius: 4px;
+        }
+
+        .table-container {
+            overflow-x: auto;
+            width: 100%;
+        }
+
+        /* Three-column layout */
+        .three-column-layout {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .left-column, .right-column {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .middle-column {
+            flex: 3;
+            min-width: 500px;
+        }
+
+        /* Section containers with box shadow */
+        .section-container {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .main-table-container {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        .section-title {
+            color: #333;
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+
+        /* Promotional content styles */
+        .promo-title {
+            color: #333;
+            font-size: 1.2em;
+            margin-top: 0;
+        }
+
+        .testimonial {
+            font-style: italic;
+            padding: 10px;
+            background-color: #fff;
+            border-left: 4px solid #333;
+            margin-bottom: 15px;
+        }
+
+        .testimonial-author {
+            text-align: right;
+            font-weight: bold;
+        }
+
+        .promo-image {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 992px) {
+            .three-column-layout {
+                flex-direction: column;
+            }
+            .left-column, .middle-column, .right-column {
+                flex: 1 1 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <!-- Header with background image -->
+        <header class="page-header">
+            <h1>Speed Star Motors</h1>
+            <p>Your Ultimate Car Dealership</p>
+
+        <!-- Navigation -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact-us.html">Contact Us</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+            </ul>
+        </nav>
+        </header>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="three-column-layout">
+                <!-- Left Column -->
+                <aside class="left-column">
+                    <div class="section-container">
+                        <h3 class="promo-title">Current Promotions</h3>
+                        <img src="images/suv.png" alt="Special Offer" class="promo-image">
+                        <p>Financing as low as 3.9% APR for qualified buyers on select models.</p>
+                        <p><strong>Offer ends December 31, 2023</strong></p>
+                    </div>
+
+                    <div class="section-container">
+                        <h3 class="promo-title">Featured Vehicle</h3>
+                        <img src="images/sports-car.png" alt="Featured Car" class="promo-image">
+                        <h4>Toyota Supra GR</h4>
+                        <p>Limited edition now available with exclusive performance package.</p>
+                        <button style="width:100%; padding:10px; background:#333; color:white; border:none; border-radius:4px;">View Details</button>
+                    </div>
+                </aside>
+
+                <!-- Middle Column - Main Content -->
+                <main class="middle-column">
+                    <div class="main-table-container">
+                        <h2 class="section-title">Our Vehicle Inventory</h2>
+                        <p>Browse our extensive collection of premium vehicles. We offer the best selection of new and pre-owned cars in Botswana.</p>
+                        
+                        <div class="table-container">
+                            <table class="vehicle-table">
+                                <thead>
+                                    <tr>
+                                        <th>Image</th>
+                                        <th>Make & Model</th>
+                                        <th>Year</th>
+                                        <th>Description</th>
+                                        <th>VIN</th>
+                                        <th>Price (BWP)</th>
+                                        <th>Location</th>
+                                        <th>Availability</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><img src="images/sports-car.png" alt="Toyota Supra" class="vehicle-image"></td>
+                                        <td>Toyota Supra GR</td>
+                                        <td>2023</td>
+                                        <td>3.0L Turbocharged Inline-6, 382 HP, Rear-Wheel Drive</td>
+                                        <td>JT4RN01P1M7123456</td>
+                                        <td>1,200,000</td>
+                                        <td>Gaborone</td>
+                                        <td><span class="in-stock-text">In Stock</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><img src="images/suv.png" alt="Range Rover" class="vehicle-image"></td>
+                                        <td>Range Rover Sport</td>
+                                        <td>2022</td>
+                                        <td>3.0L Diesel, 355 HP, All-Wheel Drive, Luxury Package</td>
+                                        <td>SALGS2VF6MA987654</td>
+                                        <td>1,850,000</td>
+                                        <td>Francistown</td>
+                                        <td><span class="in-stock-text">In Stock</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><img src="images/sports-car.png" alt="Porsche 911" class="vehicle-image"></td>
+                                        <td>Porsche 911 Carrera S</td>
+                                        <td>2023</td>
+                                        <td>3.0L Twin-Turbo Flat-6, 443 HP, Rear-Wheel Drive</td>
+                                        <td>WP0AB2A99PS123456</td>
+                                        <td>2,500,000</td>
+                                        <td>Gaborone</td>
+                                        <td><span class="out-of-stock-text">Out of Stock</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><img src="images/suv.png" alt="Mercedes GLE" class="vehicle-image"></td>
+                                        <td>Mercedes-Benz GLE 450</td>
+                                        <td>2023</td>
+                                        <td>3.0L Inline-6 Turbo, 362 HP, 4MATIC All-Wheel Drive</td>
+                                        <td>4JGFF8KE5PA654321</td>
+                                        <td>1,750,000</td>
+                                        <td>Maun</td>
+                                        <td><span class="in-stock-text">In Stock</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><img src="images/sports-car.png" alt="Audi RS5" class="vehicle-image"></td>
+                                        <td>Audi RS5 Sportback</td>
+                                        <td>2023</td>
+                                        <td>2.9L Twin-Turbo V6, 444 HP, Quattro All-Wheel Drive</td>
+                                        <td>WAUENAF46PN345678</td>
+                                        <td>1,650,000</td>
+                                        <td>Gaborone</td>
+                                        <td><span class="in-stock-text">In Stock</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="disclaimer">
+                            <p><strong>Note:</strong> All prices are subject to change without notice. Vehicle availability may vary. Contact our sales team for the most current information and to schedule a test drive.</p>
+                        </div>
+                    </div>
+                </main>
+
+                <!-- Right Column -->
+                <aside class="right-column">
+                    <div class="section-container">
+                        <h3 class="promo-title">Why Choose Us?</h3>
+                        <ul>
+                            <li>Largest inventory in Botswana</li>
+                            <li>Competitive financing options</li>
+                            <li>Certified pre-owned vehicles</li>
+                            <li>5-year warranty on all new cars</li>
+                            <li>Free delivery within Gaborone</li>
+                        </ul>
+                    </div>
+
+                    <div class="section-container">
+                        <h3 class="promo-title">Customer Testimonials</h3>
+                        <div class="testimonial">
+                            <p>"Speed Star Motors helped me find my dream car at an amazing price. Their service was exceptional!"</p>
+                            <p class="testimonial-author">- Thabo M.</p>
+                        </div>
+                        <div class="testimonial">
+                            <p>"The financing team made the process so easy. I drove away in my new SUV the same day!"</p>
+                            <p class="testimonial-author">- Amantle K.</p>
+                        </div>
+                    </div>
+
+                    <div class="section-container">
+                        <h3 class="promo-title">Quick Links</h3>
+                        <ul>
+                            <li><a href="services.html">Service Center</a></li>
+                            <li><a href="contact-us.html">Schedule Test Drive</a></li>
+                            <li><a href="feedback.html">Leave Feedback</a></li>
+                            <li><a href="about-us.html">Our History</a></li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2023 Speed Star Motors. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
